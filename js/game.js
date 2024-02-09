@@ -63,7 +63,7 @@ const nextHandler = () => {
         removeClasses();
         showQuestion();
     } else {
-        finishHandler;
+        finishHandler();
     }
 };
 const finishHandler = () => {

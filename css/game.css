@@ -103,3 +103,10 @@ h3 {
 .incorrect:hover {
     background-color: #fe6681;
 }
+#error {
+    display: none;
+    background-color: #b8cfd1;
+    color: red;
+    padding: 15px;
+    border-radius: 15px;
+}

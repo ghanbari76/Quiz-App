@@ -8,9 +8,10 @@ const scoreText = document.getElementById("score");
 const nextButton = document.getElementById("next-button");
 const finishButton = document.getElementById("finish-button");
 const questionNumber = document.getElementById("question-number");
+const level = localStorage.getItem("level") || "medium";
 
 let CORREECT_BONUS = 10;
-const URL = "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple";
+const URL = `https://opentdb.com/api.php?amount=10&difficulty=${level}&type=multiple`;
 
 let formattedData = null;
 let questionIndex = 0; 
@@ -35,7 +36,6 @@ const showQuestion = () => {
     questionNumber.innerText = questionIndex +1;
     const { question , answers , correctAnswerIndex } = formattedData[questionIndex];
     correctAnswer = correctAnswerIndex;
-    // console.log(correctAnswer);
     questionText.innerText = question;
     answerList.forEach((button,index) => {
         button.innerText = answers[index];        
